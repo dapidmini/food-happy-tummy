@@ -173,6 +173,49 @@ body {
     box-shadow: 1px 1px 3px rgba(1, 1, 3, .5);
 }
 
+/* About Section */
+.about {
+    padding: 8rem 7% 1.4rem;
+}
+
+.about h2 {
+    font-size: 2.6rem;
+    font-weight: 700;
+}
+
+.about h2 span {
+    color: var(--primary-2);
+}
+
+.about .row .about-img {
+    flex: 1 1 45rem;
+    height: 24rem;
+    object-fit: cover;
+    object-position: center;
+}
+
+.about .row .content {
+    flex: 1 1 35rem;
+    padding: 0 1rem;
+}
+
+.about .row .content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.about .row .content p {
+    margin-bottom: .8rem;
+    font-size: 1.4rem;
+    font-weight: 100;
+    line-height: 1.6;
+}
+
+.about .row {
+    flex-wrap: wrap;
+}
+
 
 /* Media Queries */
 /* Laptop */
