@@ -178,6 +178,33 @@ body {
     padding: 8rem 7% 1.4rem;
 }
 
+.about {
+    position: relative;
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* height: 10%; */
+    /* background: linear-gradient(rgba(238, 238, 238, 1), transparent 10%); */
+    /* background-image: url('../img/tentang-kami-bg.png');
+    background-size: cover; */
+}
+
+.about::after {
+    background-image: url('../img/tentang-kami-bg.png');
+    /* background-color: rgba(238, 238, 238, 0.5); */
+    filter: opacity(.25);
+}
+
+.about * {
+    opacity: 1;
+}
+
 .about h2 {
     font-size: 2.6rem;
     font-weight: 700;
@@ -189,7 +216,9 @@ body {
 
 .about .row .about-img {
     flex: 1 1 45rem;
-    height: 24rem;
+}
+
+.about .row .about-img img {
     object-fit: cover;
     object-position: center;
 }
@@ -253,6 +282,29 @@ body {
 
     .navbar .navbar-nav {
         display: none;
+    }
+
+    .about .row {
+        flex-wrap: wrap;
+    }
+
+    .about .row .about-img img {
+        height: 24rem;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .about .row .content {
+        padding: 0;
+    }
+
+    .about .row .content h3 {
+        margin-top: 1rem;
+        font-size: 2rem;
+    }
+
+    .about .row .content p {
+        font-size: 1.6rem;
     }
 }
 
