@@ -119,9 +119,9 @@ body {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background-image: url('../img/header-bg.png');
+    /* background-image: url('../img/header-bg.png');
     background-size: cover;
-    background-position: center;
+    background-position: center; */
     position: relative;
 }
 
@@ -133,19 +133,73 @@ body {
     height: 20%;
     bottom: 0;
     background: linear-gradient(0deg, rgba(238, 238, 238, 1) 8%, rgba(0, 0, 0, 0) 50%);
+    z-index: 3;
+}
+
+.hero .carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    z-index: 1;
+    opacity: .5;
+}
+
+.hero .carousel > * {
+    height: 100vh;
+}
+
+.hero .carousel img {
+    object-fit: cover;
+    object-position: center;
+    height: 100vh;
+}
+
+/* ditutup dulu krn skrg carouselnya autoplay jd tdk butuh button navigasi */
+/* .hero .carousel button {
+    z-index: 3;
+}
+.hero .carousel button span {
+    font-weight: 700;
+} */
+
+.carousel-caption-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    mix-blend-mode: exclusion;
+}
+
+.hero .content-text-bg {
+    position: absolute;
+    left: 0;
+    top: 32%;
+    height: 42vh;
+    width: 70vw;
+    background: linear-gradient(to right, rgba(223, 251, 146, 0.7) 75%, transparent);
+    z-index: 2;
 }
 
 .hero .content {
-    padding: 1.4rem 7%;
-    max-width: 70vw;
+    /* padding: 1.4rem 15%; */
+    max-width: 45vw;
+    z-index: 2;
+    position: absolute;
+    top: 53%;
+    left: 15%;
+    transform: translateY(-50%);
 }
 
 .hero .content h1 {
-    font-size: 4.5em;
-    color: #fff;
-    text-shadow: 1px 1px 3px cornflowerblue;
+    font-size: 2.75em;
+    color: var(--primary-text);
+    text-shadow: 1px 1px 3px var(--primary-1);
     line-height: 1.2;
-    mix-blend-mode: exclusion;
+    mix-blend-mode: difference;
 }
 
 .hero .content h1 span {
@@ -153,7 +207,7 @@ body {
 }
 
 .hero .content p {
-    color: #eee;
+    color: var(--primary-text);
     font-size: 1.6rem;
     margin-top: .5rem;
     line-height: 1.4;
@@ -268,6 +322,50 @@ body {
     color: var(--primary-text);
 }
 
+/* Swiper JS */
+.swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    position: relative;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+  }
+
+  .slide-content {
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(
+      to top,
+      rgb(238, 238, 238) 0%,
+      rgba(238, 238, 238, 0.7) 50%,
+      transparent 100%
+    );
+    width: 100%;
+    padding: 0 1.2rem 1.2rem 1.2rem;
+  }
+
+  .slide-content .my-title {
+    margin-bottom: 0;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.2));
+  }
+  .slide-content .my-description {
+    margin-top: 0;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+  }
+
 /* Other Styles Section */
 .shadow-custom {
     box-shadow: 0 2px 14px 0 rgba(0, 0, 0, .25), 0 3px 15px 7px rgba(0, 0, 0, 0.2) !important;
@@ -297,7 +395,7 @@ body {
 
 
 /* Tablet */
-@media(max-width: 758px) {
+@media(max-width: 768px) {
     html {
         font-size: 62.5%;
     }
@@ -314,6 +412,19 @@ body {
 
     #hamburger-menu {
         display: inline-block;
+    }
+
+    .hero .content {
+        top: 38vh;
+    }
+
+    .hero .content h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero .content-text-bg {
+        top: 35%;
+        height: 35vh;
     }
 
     .navbar .navbar-nav {
@@ -346,7 +457,7 @@ body {
 
 
 /* Mobile Phone */
-@media(max-width: 450px) {
+@media(max-width: 480px) {
     html {
         font-size: 55%;
     }
