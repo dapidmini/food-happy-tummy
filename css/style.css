@@ -322,6 +322,10 @@ body {
     color: var(--primary-text);
 }
 
+/* Popup Modal bag.Menu */
+.menu .modal {
+    margin-top: 5rem;
+}
 /* Swiper JS */
 .swiper {
     width: 100%;
@@ -329,7 +333,7 @@ body {
     padding-bottom: 50px;
   }
 
-  .swiper-slide {
+  .menu-list-container .swiper-slide {
     background-position: center;
     background-size: cover;
     width: 300px;
@@ -337,12 +341,14 @@ body {
     position: relative;
   }
 
-  .swiper-slide img {
+  .menu-list-container .swiper-slide img {
     display: block;
-    width: 100%;
+    /* width: 100%; */
+    height: 100%;
+    object-fit: cover;
   }
 
-  .slide-content {
+  .menu-list-container .slide-content {
     position: absolute;
     bottom: 0;
     background: linear-gradient(
@@ -364,6 +370,37 @@ body {
   .slide-content .my-description {
     margin-top: 0;
     text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+  }
+
+  .swiper-menu-modal {
+    padding-top: 0;
+  }
+
+  .swiper-menu-modal .swiper-wrapper {
+    overflow: hidden;
+  }
+
+  .swiper-menu-modal .swiper-slide {
+    text-align: center;
+  }
+
+  .swiper-menu-modal .swiper-slide img {
+    max-height: 60vh;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .swiper-menu-modal .slider-content p {
+    position: absolute;
+    bottom: .5rem;
+    text-shadow: 0 0 10px rgba(255, 255, 255),
+    0 0 20px rgba(255, 255, 255, 0.3),
+    0 0 30px rgba(255, 255, 255, 0.1);
+  }
+
+  .swiper-menu-modal .slider-content {
+    display: flex;
+    justify-content: center;
   }
 
 /* Other Styles Section */
