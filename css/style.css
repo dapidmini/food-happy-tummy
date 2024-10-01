@@ -157,23 +157,6 @@ body {
     height: 100vh;
 }
 
-/* ditutup dulu krn skrg carouselnya autoplay jd tdk butuh button navigasi */
-/* .hero .carousel button {
-    z-index: 3;
-}
-.hero .carousel button span {
-    font-weight: 700;
-} */
-
-.carousel-caption-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: black;
-    mix-blend-mode: exclusion;
-}
-
 .hero .content-text-bg {
     position: absolute;
     left: 0;
@@ -398,10 +381,10 @@ body {
     0 0 30px rgba(255, 255, 255, 0.1);
   }
 
-  .swiper-menu-modal .slider-content {
+  /* .swiper-menu-modal .slider-content {
     display: flex;
     justify-content: center;
-  }
+ } */
 
 /* Other Styles Section */
 .shadow-custom {
