@@ -337,7 +337,7 @@ body {
     background: linear-gradient(
       to top,
       rgb(238, 238, 238) 0%,
-      rgba(238, 238, 238, 0.7) 50%,
+      rgba(238, 238, 238, 0.7) 20%,
       transparent 100%
     );
     width: 100%;
@@ -381,10 +381,6 @@ body {
     0 0 30px rgba(255, 255, 255, 0.1);
   }
 
-  /* .swiper-menu-modal .slider-content {
-    display: flex;
-    justify-content: center;
- } */
 
 /* Other Styles Section */
 .shadow-custom {
