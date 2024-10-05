@@ -19,7 +19,6 @@ body {
     font-size: 1.2rem;
     background-color: var(--bg);
     color: #010101;
-    min-height: 15000px;
 }
 
 /* Navbar */
@@ -212,7 +211,8 @@ body {
 
 /* About Section */
 .about,
-.menu {
+.menu,
+.contact {
     padding: 8rem 7% 0;
     position: relative;
     height: 100vh;
@@ -234,12 +234,16 @@ body {
 }
 
 .about h2,
-.about .row {
+.about .row,
+.contact h2,
+.contact .row
+ {
     position: relative;
 }
 
 .about h2,
-.menu h2 {
+.menu h2,
+.contact h2 {
     font-size: 2.6rem;
     font-weight: 700;
     margin-bottom: 2rem;
@@ -247,17 +251,22 @@ body {
 }
 
 .about h2 span,
-.menu h2 span {
+.menu h2 span,
+.contact h2 span {
     color: var(--primary-2);
 }
 
 .about .row .about-img,
-.menu .row .list-container {
+.menu .row .list-container,
+.contact .row .contact-img
+ {
     flex: 1 1 35rem;
 }
 
 .about .row .about-img img,
-.menu .row .list-container img {
+.menu .row .list-container img,
+.contact .row .contact-img img
+ {
     object-fit: cover;
     object-position: center;
 }
@@ -281,7 +290,8 @@ body {
     line-height: 1.6;
 }
 
-.about .row {
+.about .row,
+.contact .row {
     flex-wrap: wrap;
 }
 
@@ -309,6 +319,7 @@ body {
 .menu .modal {
     margin-top: 5rem;
 }
+
 /* Swiper JS */
 .swiper {
     width: 100%;
@@ -319,15 +330,15 @@ body {
   .menu-list-container .swiper-slide {
     background-position: center;
     background-size: cover;
-    width: 300px;
-    height: 300px;
+    /* width: 300px;
+    height: 300px; */
     position: relative;
   }
 
   .menu-list-container .swiper-slide img {
     display: block;
     /* width: 100%; */
-    height: 100%;
+    max-height: 70vh;
     object-fit: cover;
   }
 
@@ -380,6 +391,27 @@ body {
     0 0 20px rgba(255, 255, 255, 0.3),
     0 0 30px rgba(255, 255, 255, 0.1);
   }
+
+/* fix bug saat menggabungkan popup modal dgn swiperjs 
+    yang menyebabkan slidernya gelap saat popup modal pertama ditampilkan */
+.menu .modal .modal-body {
+    overflow: hidden !important;
+}
+.swiper-slide-shadow-left {
+    background-image: none !important;
+}
+.swiper-slide-shadow-right {
+    background-image: none !important;
+}
+
+
+.contact .medsos-icon {
+    width: 3rem;
+}
+.contact .medsos-qrcode {
+    width: auto;
+    min-height: 30vh;
+}
 
 
 /* Other Styles Section */
@@ -447,11 +479,13 @@ body {
         display: none;
     }
 
-    .about .row {
+    .about .row,
+    .contact .row {
         flex-wrap: wrap;
     }
 
-    .about .row .about-img img {
+    .about .row .about-img img,
+    .contact .row .about-img img {
         height: 24rem;
         object-fit: cover;
         object-position: center;
