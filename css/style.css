@@ -159,8 +159,8 @@ body {
 .hero .content-text-bg {
     position: absolute;
     left: 0;
-    top: 32%;
-    height: 42vh;
+    top: 28%;
+    height: 50vh;
     width: 70vw;
     background: linear-gradient(to right, rgba(223, 251, 146, 0.7) 75%, transparent);
     z-index: 2;

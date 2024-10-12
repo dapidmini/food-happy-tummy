@@ -69,60 +69,11 @@ document.addEventListener('DOMContentLoaded', function(e) {
         swiperMenuModal.appendSlide(slide);
       });
 
-      // const modalSwiperSlides = wrapper.querySelectorAll('.modal-slides .swiper-slide');
-      // console.log('modal swiper slides', modalSwiperSlides);
-      // // return;
-      // modalSwiperSlides.forEach(slide => {
-      //   slide.classList.add('d-none');
-      // });
-      // // let useSlides = [];
-      // const galleryClass = '.items-gallery-' + menuClass;
-      // // console.log('menu', menuName+';'+menuClass+';'+galleryClass);
-      // // const slides = document.querySelectorAll(galleryClass);
-      // console.log('galleryclass', galleryClass);
-      // // return false;
-      // const modalSliderWrapper = document.querySelector('.swiper-menu-modal .swiper-wrapper');
-      // modalSliderWrapper.innerHTML = '';
-      // modalSwiperSlides.forEach(slide => {
-      //   if (slide.classList.contains(galleryClass)) {
-      //     slide.classList.remove('d-none');
-      //     modalSliderWrapper.append(slide);
-      //   }
-      //   // // console.log('slide', index, slide.classList.contains(galleryClass));
-      //   // if (slide.classList.contains(galleryClass)) {
-      //   //   useSlides.push(slide);
-      //   //   slide.classList.remove('d-none');
-      //   //   // swiperMenuModal.appendSlide(slide);
-      //   // } else {
-      //   //   slide.classList.add('d-none');
-      //   // //   swiperMenuModal.removeSlide(index);
-      //   // }
-      // });
-      // console.log('debug x', modalSliderWrapper);
-      
-
-      // swiperMenuModal.removeAllSlides();
-      // swiperMenuModal.appendSlide(useSlides);
-
-
 
       // inisialisasi dan aplikasikan popup modal gallery scr manual
       // utk menghindari bug swiperjs ketika digabungkan dgn popup modal
       const menuModal = new bootstrap.Modal('#modalMenu');
       menuModal.toggle();
-
-      // console.log('remove indexes', removeIndex);
-
-      // swiperMenuModal.removeSlide(removeIndex);
-      // const swiperWrappers = document.querySelectorAll('.modal .swiper-wrapper');
-      // swiperWrappers.forEach(wrapper => {
-      //   if (wrapper.id == galleryId) {
-      //     wrapper.classList.remove('d-none');
-      //   } else {
-      //     wrapper.classList.add('d-none');
-      //   }
-      //   // wrapper.classList.add('d-none');
-      // });
     });
   });
   // end btnMenuGallery.forEach
